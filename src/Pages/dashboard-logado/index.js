@@ -9,7 +9,7 @@ export default function login() {
         <Content>
           <a href={urldc}>
             <Button>
-            Logar.
+            LOGADO !!!
            </Button>
           </a>
         </Content>
