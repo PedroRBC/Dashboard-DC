@@ -50,10 +50,21 @@
   padding: 1rem;
 }
 
-
-
 .navbar-links li:hover {
   background-color: #555;
+}
+
+.Formatar-Texto {
+  text-decoration: none;
+}
+
+.Nav-Dropdown {
+  margin-top: 10px;
+}
+.Dropdown-Text-Color {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
 }
 
 .toggle-button {
