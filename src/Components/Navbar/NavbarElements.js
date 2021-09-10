@@ -40,3 +40,17 @@ max-width: 150px;
 text-align: center;
 text-decoration: none;
 `
+export const Container = styled.div`
+  position: relative;
+  display: inline-block;
+`
+export const Button = styled.button`
+  padding: 0;
+  width: 50px;
+  border: 0;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: 0;
+  font-size: 40px;
+`

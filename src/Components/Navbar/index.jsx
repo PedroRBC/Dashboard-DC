@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { BtnLogin, AvatarSpace, DropdownTEXT } from './NavbarElements';
-import { NavDropdown } from 'react-bootstrap'
+import { BtnLogin, AvatarSpace, DropdownTEXT, Container, Button } from './NavbarElements';
 import Avatar from 'react-avatar';
 const Navbar = ({state, SetState}) => {
 function SingOut() {
@@ -32,16 +31,16 @@ function SingIn() {
             <li><Link to="/dashboard">Dashboard</Link></li>
             {!!state.login && (
                 <>
+                  <Container>
                   <AvatarSpace>
                     <Avatar src={state.info.avatar} size="55" round='20px' />
+                    <DropdownTEXT class='Formatar-Texto' onClick={SingOut} as={DropdownTEXT}>Sair.</DropdownTEXT>
                   </AvatarSpace>
-                  <div class='Nav-Dropdown'>
-                    <NavDropdown title={state.info.username}>
-                      <center><a class='Formatar-Texto' onClick={SingOut} href > <NavDropdown.Item eventKey="1.1" as={DropdownTEXT}>Sair.</NavDropdown.Item> </a></center>
-                    </NavDropdown>
-                  </div>
+                  <Button >
+                  </Button>
+                  </Container>
                 </>)}
-            {!state.login && ( <a href onClick={SingIn}><BtnLogin>Login</BtnLogin></a> )}
+            {!state.login && (<BtnLogin onClick={SingIn}>Login</BtnLogin>)}
           </ul>
 
         </div>
