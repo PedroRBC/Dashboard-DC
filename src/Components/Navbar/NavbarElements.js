@@ -15,6 +15,7 @@ export const BtnLogin = styled.button`
   margin-left: 14px;
   margin-right: 14px;
   text-align: center;
+  
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
@@ -23,34 +24,33 @@ export const BtnLogin = styled.button`
 `;
 
 export const AvatarSpace = styled.div`
+display: inline-block;
 margin-right: 10px;
-margin-left: 10px;
-text-align: center;
-
 `
 export const DropdownTEXT = styled.div`
-align-items: center;
-justify-content: center;
-display: flex;
+display: inline-block ;
+text-align: center;
 border-radius: 6px;
 color: #fff ;
 background: rgba(255, 0, 0);
 width: 100%;
-max-width: 150px;
+max-width: 100px;
 text-align: center;
 text-decoration: none;
+cursor: pointer;
+outline: 0;
+padding: 4px;
 `
 export const Container = styled.div`
-  position: relative;
   display: inline-block;
+  margin-right: 8px;
+  margin-left:  20px;
+  text-align: center;
 `
-export const Button = styled.button`
-  padding: 0;
-  width: 50px;
-  border: 0;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  outline: 0;
-  font-size: 40px;
+
+export const DropMenu = styled.div`
+background-color: #333;
+cursor: pointer;  
+margin-left: 20px;
+
 `
