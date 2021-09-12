@@ -26,6 +26,11 @@ export const BtnLogin = styled.button`
 export const AvatarSpace = styled.div`
 display: inline-block;
 margin-right: 10px;
+
+& Avatar:hover {
+ lighting-color: #333;
+ 
+}
 `
 export const DropdownTEXT = styled.div`
 display: inline-block ;
@@ -48,9 +53,14 @@ export const Container = styled.div`
   text-align: center;
 `
 
-export const DropMenu = styled.div`
+export const DropMenuBtn = styled.div`
 background-color: #333;
 cursor: pointer;  
 margin-left: 20px;
+`
 
+export const DropMenu = styled.div`
+background-color: #333;
+border-radius: 12px;
+inset: 5px 25px auto auto !important;
 `
