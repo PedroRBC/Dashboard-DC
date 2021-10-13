@@ -51,3 +51,18 @@ export const Alinhar = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
+
+export const AlinharBoard = styled.div`
+  float:right;  
+  padding-right: 50px;
+  padding-top: 20px;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  & h1 {
+    
+    border-top: 10px;
+    font-size: 40px;
+  }
+`;

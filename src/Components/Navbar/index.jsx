@@ -23,7 +23,6 @@ const Navbar = ({acces, setAcces, avatar, userName}) => {
           <span class="bar"></span>
           <span class="bar"></span>
         </a>
-        
         <div class="navbar-links">
           <ul>
             <li><Link to="/">Home</Link></li>

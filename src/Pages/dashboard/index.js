@@ -1,16 +1,16 @@
 import React from 'react'
 import {BackEnd_URL} from '../../api';
-import { Alinhar, Content, Button } from './Elements'
+import { Alinhar, AlinharBoard, Content, Button } from './Elements'
+import Board from '../../Components/Board'
 
   const Dashbord = ({acces, setAcces, avatar, userName}) => {
 
-    const Logar = () => window.location.href = `${BackEnd_URL}/api/auth/discord/`
-
     function BtnLogar() {
+      const URL = () => window.location.href = `${BackEnd_URL}/api/auth/discord/`
       return (
         <Alinhar>
         <Content>
-        <Button onClick={Logar}>
+        <Button onClick={URL}>
         Logar.
        </Button>
        </Content>
@@ -20,7 +20,14 @@ import { Alinhar, Content, Button } from './Elements'
 
     return (<>
 
-      {acces === 'unauthorized' ? (<BtnLogar/>) : (<Alinhar>{acces}</Alinhar>)}
+      {acces === 'unauthorized' ? ( <BtnLogar></BtnLogar> ) : (<>
+        <AlinharBoard>
+          <h1>Top 10</h1>
+          <h1>Mais ricos</h1>
+          <Board/> 
+        </AlinharBoard>
+      
+       </>)}
       
     </>)
     

@@ -8,5 +8,11 @@ export function getAuth() {
 }
 
 export function getGuilds() {
-    return axios.get(`${BackEnd_URL}/api/discord/guilds`, {withCredentials: true })
+    return axios.get(`${BackEnd_URL}/api/discord/guilds`, { withCredentials: true})
+}
+
+export function getMoedasBoard() {
+  axios.get(`${BackEnd_URL}/api/moedas/board`).then((res) => {
+    return res.data
+  })
 }

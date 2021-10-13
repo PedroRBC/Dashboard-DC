@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from "axios";
 import {BackEnd_URL} from './api';
 import Navbar from "./Components/Navbar";
@@ -18,7 +18,6 @@ import PageDashboard from './Pages/dashboard'
   const [userName, setUsername] = useState("");
   const [avatar, setAvatar] = useState("");
 
-  function axi() {
   axios
     .get(`${BackEnd_URL}/api/auth/`, { withCredentials: true })
     .then((res) => {
@@ -33,10 +32,7 @@ import PageDashboard from './Pages/dashboard'
       }
         setLoading(false);
     });
-      
-  }
-    useEffect(() => { axi() 
-  })
+
 
     return (
     <Router>
@@ -53,7 +49,7 @@ import PageDashboard from './Pages/dashboard'
     </>
     )}
       <Footer/>
-      
+
     </Router>
       
     )
