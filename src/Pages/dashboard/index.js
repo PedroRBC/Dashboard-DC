@@ -3,7 +3,7 @@ import {BackEnd_URL} from '../../api';
 import { Alinhar, AlinharBoard, Content, Button } from './Elements'
 import Board from '../../Components/Board'
 
-  const Dashbord = ({acces, setAcces, avatar, userName}) => {
+  const Dashbord = ({acces, setAcces, avatar, userName, users, setUsers}) => {
 
     function BtnLogar() {
       const URL = () => window.location.href = `${BackEnd_URL}/api/auth/discord/`
@@ -24,7 +24,7 @@ import Board from '../../Components/Board'
         <AlinharBoard>
           <h1>Top 10</h1>
           <h1>Mais ricos</h1>
-          <Board/> 
+          <Board users={users} setUsers={setUsers} /> 
         </AlinharBoard>
       
        </>)}

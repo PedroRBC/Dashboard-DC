@@ -12,18 +12,26 @@ const Navbar = ({acces, setAcces, avatar, userName}) => {
     axios.get(`${BackEnd_URL}/api/logout`, {withCredentials: true})
   }
 
+  function clickMenu() {
+    console.log('Click!')
+   document.getElementsByClassName('navbar-links')[0].classList.toggle('active')
+  }
+
   const Logar = () => window.location.href = `${BackEnd_URL}/api/auth/discord/`
 
   return (
     <>
-      <nav class="navbar">
-      <a class="Formatar-Texto" href="/"><div class='logoeffect'>Pedruu Bot</div></a>
-          <a href="#troca" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
+      <nav className="navbar">
+      <a className="Formatar-Texto" href="/">
+        <div className='logoeffect'>Pedruu Bot</div>
+      </a>
+
+      <div onClick={clickMenu} className="toggle-button">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+      </div>
+        <div className="navbar-links">
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>

@@ -1,16 +1,16 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {ScoreBoard, UserLine, Name, Score, AvatarSpace} from './Elements'
 import { BackEnd_URL } from '../../api'
 import axios from "axios";
 import Avatar from 'react-avatar';
 
 function getUsers(setUsers, users) {
-  if(users.length > 2) return
+  if(users[2].id) return
   axios
   .get(`${BackEnd_URL}/api/moedas/board`)
   .then((res) => {
     setUsers(res.data)
-  })
+  }).catch((e)=>{return});
 }
 
 function Player({name, moedas, avatar}) {
@@ -29,14 +29,13 @@ function Player({name, moedas, avatar}) {
   );
 }
 
-function Board() {
-  var [users, setUsers] = useState([]);
+function Board({users, setUsers}) {
 
     getUsers(setUsers, users)
 
   return (
       <ScoreBoard>
-        {users.map((user)=>{ return (<Player name={user.name} moedas={user.moedas} avatar={user.avatar}/>)})}
+        {users.map((user)=>{ return (<Player name={user.name} moedas={user.moedas} avatar={user.avatar} key={user.key}/>)})}
       </ScoreBoard>
   )
 }

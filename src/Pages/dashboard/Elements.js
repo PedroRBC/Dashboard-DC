@@ -60,6 +60,14 @@ export const AlinharBoard = styled.div`
   justify-content: center;
   vertical-align: middle;
 
+
+  @media (max-width: 800px) {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 100px;
+    float: none;
+  }
+
   & h1 {
     
     border-top: 10px;
