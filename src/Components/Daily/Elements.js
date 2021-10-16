@@ -6,8 +6,8 @@ export const Container = styled.div`
   margin-right: 25px;
   @media (max-width: 800px) {
     margin: 0;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
     padding-bottom: 20px;
     float: none;
     width: auto;
@@ -27,8 +27,8 @@ export const Container2 = styled.div`
   letter-spacing: 1px;
 
   @media (max-width: 800px) {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
     width: auto;
   }
 `
@@ -82,3 +82,45 @@ export const Button = styled.button`
     color: #010606;
   }
 `;
+
+export const Clock = styled.div`
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  ::before, ::after {
+  align-self: normal;
+  content: '';
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, transparent, white);
+  position: absolute;
+  z-index: 2;
+  }
+
+  ::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+  >div {
+  display: flex;
+}
+
+
+
+`
+
+export const Animate = styled.div`
+@keyframes clock {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-20vh);
+  }
+}
+`

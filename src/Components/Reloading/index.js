@@ -19,7 +19,7 @@ function Reloading(setUsers, setAcces, setUsername, setAvatar, setLoading, setDa
   }).catch((e)=>{return});
 
   axios
-  .get(`${BackEnd_URL}/api/moedas/user`, { withCredentials: true })
+  .get(`${BackEnd_URL}/api/moedas`, { withCredentials: true })
   .then((res) => {
     if (res.data.msg === "authorized") {
       setDaily(res.data.money)
@@ -37,7 +37,7 @@ function Reloading(setUsers, setAcces, setUsername, setAvatar, setLoading, setDa
     }).catch((e)=>{return});
 
     axios
-    .get(`${BackEnd_URL}/api/moedas/user`, { withCredentials: true })
+    .get(`${BackEnd_URL}/api/moedas`, { withCredentials: true })
     .then((res) => {
       if (res.data.msg === "authorized") {
         setDaily(res.data.money)
