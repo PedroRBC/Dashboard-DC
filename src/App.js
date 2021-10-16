@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { boardUsers } from './cfgdefault'
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Loading from "./Components/Loading"
 import Reloading from "./Components/Reloading"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import GlobalStyle from "./globalStyles";
 import './FiraCode.css'
@@ -36,6 +38,8 @@ import PageDashboard from './Pages/dashboard'
     </Switch>
     </>
     )}
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+
       <Footer/>
 
     </Router>
