@@ -1,9 +1,10 @@
 import React from 'react'
 import {BackEnd_URL} from '../../api';
-import { Alinhar, AlinharBoard, Content, Button } from './Elements'
+import { Alinhar, AlinharBoard,AlinharRight, Content, Button } from './Elements'
 import Board from '../../Components/Board'
+import Daily from '../../Components/Daily'
 
-  const Dashbord = ({acces, setAcces, avatar, userName, users, setUsers}) => {
+  const Dashbord = ({acces, setAcces, avatar, userName, users, setUsers, daily, setDaily}) => {
 
     function BtnLogar() {
       const URL = () => window.location.href = `${BackEnd_URL}/api/auth/discord/`
@@ -21,12 +22,15 @@ import Board from '../../Components/Board'
     return (<>
 
       {acces === 'unauthorized' ? ( <BtnLogar></BtnLogar> ) : (<>
+        <AlinharRight>
+        <Daily daily={daily}/>
         <AlinharBoard>
           <h1>Top 10</h1>
           <h1>Mais ricos</h1>
           <Board users={users} setUsers={setUsers} /> 
         </AlinharBoard>
-      
+        </AlinharRight>
+        
        </>)}
       
     </>)

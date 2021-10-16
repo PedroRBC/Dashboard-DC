@@ -16,10 +16,11 @@ import PageDashboard from './Pages/dashboard'
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState(boardUsers);
   const [acces, setAcces] = useState();
+  const [daily, setDaily] = useState({});
   const [userName, setUsername] = useState("");
   const [avatar, setAvatar] = useState("");
 
-  useEffect(()=>{ Reloading(setUsers, setAcces, setUsername, setAvatar, setLoading)},[])
+  useEffect(()=>{ Reloading(setUsers, setAcces, setUsername, setAvatar, setLoading, setDaily)},[])
 
     return (
     <Router>
@@ -31,7 +32,7 @@ import PageDashboard from './Pages/dashboard'
 
     <Switch>
       <Route exact path='/' component={ PageHome }/>
-      <Route exact path='/dashboard'><PageDashboard acces={acces} setAcces={setAcces} avatar={avatar} userName={userName} users={users} setUsers={setUsers} /></Route> 
+      <Route exact path='/dashboard'><PageDashboard acces={acces} setAcces={setAcces} avatar={avatar} userName={userName} users={users} setUsers={setUsers} daily={daily} setDaily={setDaily} /></Route> 
     </Switch>
     </>
     )}

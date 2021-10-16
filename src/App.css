@@ -15,24 +15,34 @@
     height: 100%;
 }
   body {
-    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(./img/banner2.webp);
+    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url('http://pedrorbc.ddns.net:8090/assets/default/banner.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
-.navbar {
-  display: flex;
+
+.sub-nav {
   position: relative;
+  height: 76px;
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: white;
   padding-left: 8px;
   padding-right: 8px;
+  top: 0;
 }
 
 .navbar-links {
   height: 100%;
+  position: sticky;
 }
 
 .navbar-links ul {
@@ -40,6 +50,15 @@
   margin: 0;
   padding: 0;
   margin-right: 15px;
+
+}
+
+@media (max-width: 800px) {
+ 
+  .navbar-links ul {
+    margin-right: 0px;
+  }
+ 
 }
 
 .navbar-links li {
@@ -55,6 +74,10 @@
 
 .navbar-links li:hover {
   background-color: #555;
+}
+
+.navbar-links ul Dropdown {
+  transition: all 0.2s ease-in-out;
 }
 
 .Formatar-Texto {
@@ -133,6 +156,7 @@
   .navbar {
       flex-direction: column;
       align-items: flex-start;
+      top: 0;
   }
 
   .toggle-button {

@@ -8,6 +8,7 @@ export const ScoreBoard = styled.div`
   border-radius: 15px; 
   padding-right: 5px;
   padding-left: 5px;
+  
 
   @media (max-width: 800px) {
    

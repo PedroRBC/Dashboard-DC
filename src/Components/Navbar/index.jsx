@@ -19,8 +19,8 @@ const Navbar = ({acces, setAcces, avatar, userName}) => {
 
   const Logar = () => window.location.href = `${BackEnd_URL}/api/auth/discord/`
 
-  return (
-    <>
+  return (<>
+    <nav className="sub-nav">
       <nav className="navbar">
       <a className="Formatar-Texto" href="/">
         <div className='logoeffect'>Pedruu Bot</div>
@@ -54,6 +54,7 @@ const Navbar = ({acces, setAcces, avatar, userName}) => {
           </ul>
 
         </div>
+      </nav>
       </nav>
     </>
   );

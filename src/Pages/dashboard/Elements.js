@@ -52,20 +52,27 @@ export const Alinhar = styled.div`
   flex-direction: column;
 `;
 
+export const AlinharRight = styled.div`
+float: right;
+margin-right: 50px;
+margin-top: 20px;
+margin-bottom: 100px;
+@media (max-width: 800px) {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    float: none;
+  }
+`
+
 export const AlinharBoard = styled.div`
-  float:right;  
-  padding-right: 50px;
-  padding-top: 20px;
   text-align: center;
   justify-content: center;
   vertical-align: middle;
-
+  margin-top: 20px;
 
   @media (max-width: 800px) {
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-bottom: 100px;
-    float: none;
+      padding-bottom: 100px;
   }
 
   & h1 {
